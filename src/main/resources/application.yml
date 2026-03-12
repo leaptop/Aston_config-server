@@ -1,0 +1,24 @@
+server:
+  port: 8888  # стандартный порт Config Server
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          # URL Git-репозитория, где хранятся конфигурации
+          uri: https://github.com/leaptop/config-repo
+          # Можно использовать локальную папку для разработки:
+          # uri: file://${user.home}/TestTasksForCompanies/AstonIntensive/config-repo
+          default-label: main
+          search-paths: '{application}'  # ищет подпапку с именем приложения
+  security:
+    user:
+      name: config
+      password: config
+
+logging:
+  level:
+    org.springframework.cloud.config: DEBUG
