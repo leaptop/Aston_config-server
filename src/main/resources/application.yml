@@ -12,7 +12,7 @@ spring:
           uri: https://github.com/leaptop/config-repo
           # Можно использовать локальную папку для разработки:
           # uri: file://${user.home}/TestTasksForCompanies/AstonIntensive/config-repo
-          default-label: main
+          default-label: development
           search-paths: '{application}'  # ищет подпапку с именем приложения
   security:
     user:
